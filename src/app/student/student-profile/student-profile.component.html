@@ -1,0 +1,95 @@
+ 
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-10">
+  
+    
+  <div class="card mt-5" id="cc" *ngIf="getstudentprofile">
+  <div class="card-header">
+      <div class="card-body">
+        <table class="table table-borderless mt-5 text-light">
+          <tr>
+              <th><h3>Id:</h3></th>
+              <td><h4>{{getstudentprofile.sid}}</h4></td>
+              
+          </tr><br>
+          <tr>
+              <th><h3>Name:</h3></th>
+              <td><h4>{{getstudentprofile.user}}</h4></td>
+          </tr><br>
+          <tr>
+            <th><h3>year</h3></th>
+            <td><h4>{{getstudentprofile.year}}</h4></td>
+        </tr><br>
+          <tr  >
+              <th><h3>PhoneNumber:</h3></th>
+              <td><h4>{{getstudentprofile.phonenumber}}</h4></td>
+          </tr><br>
+          <tr  >
+              <th><h3>Email:</h3></th>
+              <td><h4>{{getstudentprofile.email}}</h4></td>
+          </tr><br>
+          
+      
+      </table>
+      
+  
+      </div>
+  
+  </div>
+  </div>
+  <div class="text-center ">
+  <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#i">Update</button>
+  </div>
+  </div>
+  
+  </div>
+  
+  
+    
+    <!--  The Modal -->
+    <div class="modal mt-5" id="i" *ngIf="getstudentprofile">
+      <div class="modal-dialog">
+        <div class="modal-content text-dark" style="background-color: lightgrey;">
+     
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Edit profile</h4>
+            <button type="button" class="close" data-dismiss="modal">x</button>
+          </div>
+    
+          <!-- Modal body -->
+          <div class="modal-body">
+           <form action="" #ref="ngForm" (ngSubmit)="editlecturer(ref.value)">
+              
+               <div class="form-group">
+                  <label for="">ID</label>
+                  <label class="text-danger">(don't change ID)</label>
+                  <input type="text" name="sid" id=""class="form-control" [(ngModel)]="getstudentprofile.sid">
+                   </div>
+                   <div class="form-group">
+                      <label for="">Name</label>
+                      <input type="text" name="user" id=""class="form-control" [(ngModel)]="getstudentprofile.user">
+                       </div>
+                       <div class="form-group">
+                        <label for=""> year</label>
+                        <input type="text" name="year" id=""class="form-control" [(ngModel)]="getstudentprofile.year" >
+                         </div>
+                       <div class="form-group">
+                          <label for=""> PhoneNumber</label>
+                          <input type="text" name="phonenumber" id=""class="form-control" [(ngModel)]="getstudentprofile.phonenumber" >
+                           </div>
+                           <div class="form-group">
+                              <label for="">Email</label>
+                              <input type="email" name="email" id=""class="form-control"[(ngModel)]="getstudentprofile.email">
+                               </div>
+                              
+                                   <button class="btn btn-primary" type="submit">submit</button>
+          </form> 
+          </div>
+     
+         
+         </div>
+      </div>
+    </div>
+  

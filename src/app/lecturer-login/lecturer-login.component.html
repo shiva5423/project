@@ -1,0 +1,16 @@
+<h2 class="text-center mb-5 text-white">LOGIN</h2>
+<form #ref="ngForm" (ngSubmit)="lecturerData(ref.value);ref.reset()">
+    <div class="form-group">
+        <label for="u" class="text-white" >USERNAME</label>
+      
+        <input type="text" name="username" placeholder="enter username"  id="u"  ngModel class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="p" class="text-white">PASSWORD</label>
+      
+        <input type="password" name="password" placeholder="enter password" ngModel id="p" class="form-control">
+    </div>
+    <div class="text-center">
+        <button class="btn btn-success" type="submit">LOGIN</button>
+    </div>
+</form>

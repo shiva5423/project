@@ -1,0 +1,17 @@
+body {
+    background-image: url("/assets/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+#btn{
+    font-size:24px;
+    width:150px;
+    border:0;
+
+}
+#btn:hover,#btn:active{
+    background-color: red;
+}
+.card { background-color: rgba(80, 77, 77, 0.377); }

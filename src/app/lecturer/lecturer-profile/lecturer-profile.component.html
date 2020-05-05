@@ -1,0 +1,87 @@
+ 
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-10">
+  
+    
+  <div class="card mt-5" id="cc" *ngIf="getlecturerprofile">
+  <div class="card-header">
+      <div class="card-body">
+        <table class="table table-borderless mt-5 text-light">
+          <tr>
+              <th><h3>Id:</h3></th>
+              <td><h4>{{getlecturerprofile.lid}}</h4></td>
+              
+          </tr><br>
+          <tr>
+              <th><h3>Name:</h3></th>
+              <td><h4>{{getlecturerprofile.user}}</h4></td>
+          </tr><br>
+          <tr  >
+              <th><h3>Subject</h3></th>
+              <td><h4>{{getlecturerprofile.subject}}</h4></td>
+          </tr><br>
+          <tr  >
+            <th><h3>PhoneNumber:</h3></th>
+            <td><h4>{{getlecturerprofile.phonenumber}}</h4></td>
+        </tr><br>
+          
+      
+      </table>
+      
+  
+      </div>
+  
+  </div>
+  </div>
+  <div class="text-center ">
+  <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#i">Update</button>
+  </div>
+  </div>
+  
+  </div>
+  
+  
+    
+    <!--  The Modal -->
+    <div class="modal mt-5" id="i" *ngIf="getlecturerprofile">
+      <div class="modal-dialog">
+        <div class="modal-content text-dark" style="background-color: lightgrey;">
+     
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Edit profile</h4>
+            <button type="button" class="close" data-dismiss="modal">x</button>
+          </div>
+    
+          <!-- Modal body -->
+          <div class="modal-body">
+           <form action="" #ref="ngForm" (ngSubmit)="editlecturer(ref.value)">
+              
+               <div class="form-group">
+                  <label for="">ID</label>
+                  <label class="text-danger">(don't change ID)</label>
+                  <input type="text" name="lid" id=""class="form-control" [(ngModel)]="getlecturerprofile.lid">
+                   </div>
+                   <div class="form-group">
+                      <label for="">Name</label>
+                      <input type="text" name="user" id=""class="form-control" [(ngModel)]="getlecturerprofile.user">
+                       </div>
+                       <div class="form-group">
+                          <label for=""> PhoneNumber</label>
+                          <input type="text" name="phonenumber" id=""class="form-control" [(ngModel)]="getlecturerprofile.phonenumber" >
+                           </div>
+                           <div class="form-group">
+                              <label for="">Email</label>
+                              <input type="email" name="subject" id=""class="form-control"[(ngModel)]="getlecturerprofile.subject">
+                               </div>
+                              
+                                   <button class="btn btn-primary" type="submit">submit</button>
+          </form> 
+          </div>
+     
+         
+         </div>
+      </div>
+    </div>
+  

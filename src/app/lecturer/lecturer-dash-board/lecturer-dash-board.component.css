@@ -1,0 +1,14 @@
+#x{
+    background-image: url("/assets/lbg1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+  
+}
+#y{
+    background-color: black;
+}
+a:link, a:visited {
+  text-decoration: none;
+}
